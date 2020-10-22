@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta charset='utf-8'>
+	<link rel="stylesheet" href="ble/styles.css">
+	<script type="text/javascript" src="ble/script.js"></script>
+	<script type="text/javascript" src="ble/ble.js"></script>
+  
+	<style>
+		body {
+		padding-top: 5rem;
+		}
+	</style>
+ 
+	<title>BLE Temp/RH Sensor</title>
+</head>
+
+<body>
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+	<!--<a id="prodname" class="navbar-brand text-success" href="#">Wireless Temp/RH Sensor</a>-->
+	<a class="navbar-brand text-success" href="#">
+    <img id="ble_icon" src="ble/bluetooth_inactive.svg" width="30" height="30" class="d-inline-block align-top" alt="">
+    Temp/RH Sensor
+  </a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	<div class="collapse navbar-collapse" id="navbarsExampleDefault">
+		<ul class="navbar-nav mr-auto">
+			<li class="nav-item">
+				<a class="nav-link" href="#" id="wifistatus"></a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#" id="connectBtn">Connect</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#" id="disconnectBtn">Disconnect</a>
+			</li>
+		</ul>
+	</div>
+</nav>
+
+<main role="main" class="container">
+
+<nav>
+	<div class="nav nav-tabs" id="nav-tab" role="tablist">
+		<a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Data</a>
+		<a class="nav-item nav-link" id="nav-config-tab" data-toggle="tab" href="#nav-config" role="tab" aria-controls="nav-config" aria-selected="false">Setup</a>
+	</div>
+</nav>
+
+<div class="tab-content" id="nav-tabContent">
+	<div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+		<div class="row row-cols-1 row-cols-sm-2 p-3">
+			<div class="col-md-4">
+				<div class="card h-100 text-center">
+					<h5 class="card-header">Temperature</h5>
+					<div class="card-body">
+						<h5 id='tms' class="card-title">...</h5>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="card h-100 text-center">
+					<h5 class="card-header">Relative Humidity</h5>
+					<div class="card-body">
+						<h5 id='rh' class="card-title">...</h5>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<div class="card h-100 text-center">
+					<h5 class="card-header" id="graphtitle">Graph</h5>
+					<div class="card-body">
+						<div id="div_g" class="w-100 p-3" style="height:400px;"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tab-pane fade" id="nav-config" role="tabpanel" aria-labelledby="nav-profile-tab">
+		<div class="row row-cols-1 row-cols-sm-2 p-3">
+			<div class="col-md-4">
+				<div class="card h-100 text-center">
+					<h5 class="card-header">Graph Settings</h5>
+					<div class="card-body">
+						<form>
+							<div class="form-group row">
+								<label for="inputNumSamples" class="col-sm-4 col-form-label">Samples</label>
+								<div class="col-sm-8">
+									<input type="number" class="form-control" id="inputNumSamples" min="100" max="1000" step="100">
+								</div>
+							</div>
+							<div class="form-group row">
+								<label for="inputInterval" class="col-sm-4 col-form-label">Int[ms]</label>
+								<div class="col-sm-8">
+									<input type="number" class="form-control" id="inputInterval" min="500" max="3600000" step="1000">
+								</div>
+							</div>
+							<div class="form-group row">
+								<label for="tempUnits" class="col-sm-4 col-form-label">Units</label>
+								<div class="col-sm-8">
+									<select class="form-control" id="tempUnits">
+									<option value="0">Celsius</option>
+									<option value="1">Fahrenheit</option>
+									</select>
+								</div>
+							</div>
+							<div class="form-group row">
+								<div class="col-sm-12">
+									<button type="button" class="btn btn-primary" id="btn_save_graph_settings">Submit</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</main>
+</body>
+      
+</html>
