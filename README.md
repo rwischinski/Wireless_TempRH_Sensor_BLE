@@ -14,6 +14,6 @@ Install and run:
 * Load sketch (Wireless_TempRH_Sensor_BLE.ino) to ESP32
 * Open web browser using URL: https://rwischinski.github.io/Wireless_TempRH_Sensor_BLE/http/
 * Click on "Connect"
-* Select "Integra_TRH_Sensor_01"
+* Select "Integra_TRH_Sensor_01" (change for additional sensors)
 * Click on "Pair"
 * Enjoy
