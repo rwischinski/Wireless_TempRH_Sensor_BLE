@@ -1,4 +1,4 @@
-# ESP32 based Temperature/RH sensor with Web Bluetooth interface
+# ESP32-based Temperature/RH sensor with Web Bluetooth interface
 
 Hardware:
 * Sparkfun ESP32 Thing Plus (https://www.sparkfun.com/products/15663)
