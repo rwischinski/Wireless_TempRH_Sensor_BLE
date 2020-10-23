@@ -6,7 +6,7 @@ Hardware:
 * LiPo battery (optional)
 
 Webpage:
-* Uses: jQuery, Bootstrap, Popper, Dygraphs (trend chart)
+* Uses: jQuery, Bootstrap, Popper, Dygraphs (trend chart; https://dygraphs.com/)
 
 ![IntegraTRH BLE Sensor](https://user-images.githubusercontent.com/6797506/96926352-7750fe00-1483-11eb-8272-d3238da30e06.png)
 
