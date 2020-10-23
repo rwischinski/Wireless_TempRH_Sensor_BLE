@@ -1,9 +1,13 @@
 
 /*
- * Sketch: BLE
+ * Sketch: Wireless_TempRH_Sensor_BLE.ino
  * Intended to be run on an ESP32
  */
-
+/*
+    Based on Neil Kolban example for IDF: https://github.com/nkolban/esp32-snippets/blob/master/cpp_utils/tests/BLE%20Tests/SampleServer.cpp
+    Ported to Arduino ESP32 by Evandro Copercini
+    updates by chegewara and RHW
+*/
 
 // ====================================== BLE ============================================== //
 
